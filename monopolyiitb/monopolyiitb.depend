@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1425999265 source:f:\programming\projects\monopolyiitb\classes.cpp
+	"classes.h"
+
+1425999265 f:\programming\projects\monopolyiitb\classes.h
+	<sstream>
+
+1425999526 source:f:\programming\projects\monopolyiitb\functions.cpp
+	<iostream>
+	"functions.h"
+	"classes.h"
+
+1425999577 f:\programming\projects\monopolyiitb\functions.h
+	"classes.h"
+
+1425999410 source:f:\programming\projects\monopolyiitb\main.cpp
+	<iostream>
+	"functions.h"
+	<string>
+
