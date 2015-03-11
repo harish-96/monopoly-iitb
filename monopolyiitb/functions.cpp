@@ -25,13 +25,3 @@ int Roll()
     //body of function
     return roll;
 }
-
-bool checkInvest()
-{
-    //check whether money or time is to be invested
-}
-
-bool checkBuy()
-{
-
-}

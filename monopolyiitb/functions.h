@@ -9,7 +9,5 @@ void movement();
 void buy();
 void invest();
 int Roll();
-bool checkInvest();
-bool checkBuy();
 
 #endif // FUNCTIONS_H

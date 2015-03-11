@@ -8,6 +8,8 @@ Cell cells[24];
 int currPlayer = 3;
 int currPosition;
 int diceRoll;
+bool checkBuy;
+bool checkInvest;
 
 int main()
 {
@@ -31,12 +33,12 @@ int main()
         case 1: //say some startup
             if(cells[currPosition].owner == -1)
             {
-                if(checkBuy()) buy();
+                if(checkBuy) buy();
                 continue;
             }
             else if(cells[currPosition].owner == currPlayer)
             {
-                if(checkInvest()) invest();
+                if(checkInvest) invest();
                 continue;
             }
             else
