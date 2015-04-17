@@ -1,0 +1,182 @@
+# depslib dependency file v1.0
+1426355481 source:f:\programming\projects\monopolyiitb\classes.cpp
+	"classes.h"
+
+1426367031 f:\programming\projects\monopolyiitb\classes.h
+	<sstream>
+
+1426366896 source:f:\programming\projects\monopolyiitb\functions.cpp
+	<iostream>
+	"functions.h"
+	"classes.h"
+
+1426366868 f:\programming\projects\monopolyiitb\functions.h
+	"classes.h"
+	<windows.h>
+
+1426367072 source:f:\programming\projects\monopolyiitb\main.cpp
+	<simplecpp>
+	<canvas.h>
+	"functions.h"
+	<sstream>
+	<time.h>
+	<stdlib.h>
+
+1427736896 source:c:\users\deepak\desktop\cs 101 project\check 2\monopolyiitb\classes.cpp
+	"classes.h"
+
+1427747760 c:\users\deepak\desktop\cs 101 project\check 2\monopolyiitb\classes.h
+	<sstream>
+	<windows.h>
+
+1427747838 source:c:\users\deepak\desktop\cs 101 project\check 2\monopolyiitb\functions.cpp
+	<iostream>
+	"functions.h"
+	"classes.h"
+
+1427746565 c:\users\deepak\desktop\cs 101 project\check 2\monopolyiitb\functions.h
+	"classes.h"
+	<windows.h>
+
+1427746565 source:c:\users\deepak\desktop\cs 101 project\check 2\monopolyiitb\main.cpp
+	<simplecpp>
+	"functions.h"
+	<sstream>
+	<time.h>
+	<stdlib.h>
+	<windows.h>
+
+1427735440 source:c:\users\deepak\desktop\cs 101 project\check 2\monopolyiitb\player.cpp
+
+1427736896 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode\monopolyiitb\classes.cpp
+	"classes.h"
+
+1427902214 c:\users\deepak\desktop\cs 101 project\prototype_gamecode\monopolyiitb\classes.h
+	<sstream>
+	<windows.h>
+
+1427903060 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode\monopolyiitb\functions.cpp
+	<iostream>
+	"functions.h"
+	"classes.h"
+
+1427902010 c:\users\deepak\desktop\cs 101 project\prototype_gamecode\monopolyiitb\functions.h
+	"classes.h"
+	<windows.h>
+
+1427735440 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode\monopolyiitb\player.cpp
+
+1427904121 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode\monopolyiitb\main.cpp
+	<simplecpp>
+	"functions.h"
+	<sstream>
+	<time.h>
+	<stdlib.h>
+	<windows.h>
+
+1428532393 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\classes.cpp
+	"classes.h"
+
+1428531768 c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\classes.h
+	<sstream>
+	<windows.h>
+
+1427735440 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\player.cpp
+
+1428535272 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\functions.cpp
+	<simplecpp>
+	"functions.h"
+	"classes.h"
+	<sstream>
+
+1428535033 c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\functions.h
+	"classes.h"
+	<windows.h>
+	"graphics.h"
+	<time.h>
+	<stdlib.h>
+	<windows.h>
+
+1428528777 c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\graphics.h
+	<simplecpp>
+	"functions.h"
+
+1428528925 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\main.cpp
+	<simplecpp>
+	"functions.h"
+
+1428535272 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode - copy\monopolyiitb\graphics.cpp
+	<simplecpp>
+	"functions.h"
+
+1428769118 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\classes.cpp
+	"classes.h"
+
+1428769610 c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\classes.h
+	<sstream>
+	<windows.h>
+
+1428771206 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\functions.cpp
+	<simplecpp>
+	"functions.h"
+	"classes.h"
+	<sstream>
+
+1428693297 c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\functions.h
+	"classes.h"
+	<windows.h>
+	"graphics.h"
+	<time.h>
+	<stdlib.h>
+	<windows.h>
+
+1428528777 c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\graphics.h
+	<simplecpp>
+	"functions.h"
+
+1428693297 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\main.cpp
+	<simplecpp>
+	"functions.h"
+
+1427735440 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\player.cpp
+
+1428781864 source:c:\users\deepak\desktop\cs 101 project\prototype_gamecode+graphics\monopolyiitb\graphics.cpp
+	<simplecpp>
+	"functions.h"
+
+1428769118 source:c:\users\deepak\desktop\monopolyiitb\classes.cpp
+	"classes.h"
+
+1428769610 c:\users\deepak\desktop\monopolyiitb\classes.h
+	<sstream>
+	<windows.h>
+
+1429279645 source:c:\users\deepak\desktop\monopolyiitb\functions.cpp
+	<simplecpp>
+	"functions.h"
+	"classes.h"
+	<sstream>
+
+1428693297 c:\users\deepak\desktop\monopolyiitb\functions.h
+	"classes.h"
+	<windows.h>
+	"graphics.h"
+	<time.h>
+	<stdlib.h>
+	<windows.h>
+
+1428528777 c:\users\deepak\desktop\monopolyiitb\graphics.h
+	<simplecpp>
+	"functions.h"
+
+1428693297 source:c:\users\deepak\desktop\monopolyiitb\main.cpp
+	<simplecpp>
+	"functions.h"
+
+1427735440 source:c:\users\deepak\desktop\monopolyiitb\player.cpp
+
+1429278221 source:c:\users\deepak\desktop\monopolyiitb\graphics.cpp
+	<simplecpp>
+	"functions.h"
+	<time.h>
+
