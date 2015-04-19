@@ -9,17 +9,19 @@ using namespace std;
 
 extern int winner;
 extern bool playersPlaying[4];
+
+
 class Cell {
 public:
-    int moneyCost,timeCost, moneyRent,timeRent;
-    int xCentre,yCentre,length,breadth;
+    int moneyCost,timeCost, moneyRent,timeRent; //the parameters related to the cell
+    int xCentre,yCentre,length,breadth; // graphical information
     char info[700];
-    string infoString;
+    string infoString; // the info to be displayed when the cell is clicked
     string name;
-    int owner = -1;
+    int owner = -1; // 0 for player1,1 for player2, 2 for player3, and 4 for player4
     int color;//0-nocolor 1-red 2-yellow 3-green 4-blue
-    int investMoney;
-    int investTime;
+    int investMoney; // amount of money to be invested
+    int investTime;//amount of time to be invested
     int incr_timeRent;
     int incr_moneyRent;
     char* investMessage;
@@ -31,18 +33,18 @@ public:
 
 class Player {
 public:
-    int money;
-    int time;
-    int position;
+    int money;//money owned
+    int time;//time owned
+    int position;//position of player from 0-21
     bool propsOwned[22];
-    int dcCounter;
-    int xCentre,yCentre,length,breadth;
-    char info[100];
+    int dcCounter; //check if player is on dc or not
+    int xCentre,yCentre,length,breadth; //for setting the pawns in the graphic code
+    char info[100]; //info to be displayed when the box of individual player is clicked
     string infoString;
     string name;
     int dxCentre,dyCentre;
-    void setInfo(int money1,int time1,int position1,int dcCounter1);
-    void setGraphInfo(int x,int y,int l,int b,string name1);
+    void setInfo(int money1,int time1,int position1,int dcCounter1); //function to set info of the player
+    void setGraphInfo(int x,int y,int l,int b,string name1); //function to set the graphical info of the player for the pawns
     void updateInfoString();
 };
 

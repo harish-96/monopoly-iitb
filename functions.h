@@ -26,6 +26,6 @@ bool checkEndGame(); //checks if the game has ended according to a pre-decided c
 void initCells_Players(); // sets the initial values of member variables of class objects
 void checkChance(); // game proceeds according to diceroll
 bool checkIfPlaying(int player);// check if the player is playing
-void resetInfo(int j);// resets the info of properties owned by current player
+void resetInfo(int j,Rectangle *ownership);// resets the info of properties owned by current player
 void Engine();
 #endif // FUNCTIONS_H

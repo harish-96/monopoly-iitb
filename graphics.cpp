@@ -12,6 +12,7 @@ void board()
         t_player1.setColor(COLOR("red"));
         t_player1.setFill(true);
 
+        //rectangles of players
 
         Rectangle player2(25,350,50,500);
         player2.setColor(COLOR("blue"));
@@ -22,7 +23,9 @@ void board()
         Text t_player2_y(25,340,"y");
         Text t_player2_e(25,360,"e");
         Text t_player2_r(25,380,"r");
+
         /*Text t_player2_g(25,400," ");*/
+
         Text t_player2_2(25,420,"2");
         t_player2_p.setColor(COLOR("blue"));
         t_player2_p.setFill(true);
@@ -39,7 +42,6 @@ void board()
         t_player2_2.setColor(COLOR("blue"));
         t_player2_2.setFill(true);
 
-
         Rectangle player3(1275,350,50,500);
         player3.setColor(COLOR("green"));
         player3.setFill(true);
@@ -49,7 +51,9 @@ void board()
         Text t_player3_y(1275,340,"y");
         Text t_player3_e(1275,360,"e");
         Text t_player3_r(1275,380,"r");
+
         /*Text t_player3_g(1275,400," ");*/
+
         Text t_player3_3(1275,420,"3");
         t_player3_p.setColor(COLOR("green"));
         t_player3_p.setFill(true);
@@ -74,11 +78,11 @@ void board()
         t_player4.setColor(COLOR("yellow"));
         t_player4.setFill(true);
 
+        // the cells outline
+        /*Rectangle board_ext(650,350,1148,552);
+        Rectangle board_int(650,350,820,368);*/
 
-        Rectangle board_ext(650,350,1148,552);
-        Rectangle board_int(650,350,820,368);
-
-
+        //creating cells
         Rectangle cell_1((650-492+(0*164)),(350+230-(0*92)),164,92);
         Rectangle cell_2((650-492+(0*164)),(350+230-(1*92)),164,92);Text t_cell_2((650-492+(0*164)),(350+230-(1*92)),"Educational Start-Up");
         Rectangle cell_3((650-492+(0*164)),(350+230-(2*92)),164,92);Text t_cell_3((650-492+(0*164)),(350+230-(2*92)),"Personal Project");
@@ -109,23 +113,30 @@ void board()
         Text t_cell_9((650-492+(3*164)),(350+230-(5*92)),"CHANCE");
         Text t_cell_12((650-492+(6*164)),(350+230-(5*92)),"DC++");
 
+        // invest button
         Rectangle button_invest(650,295,200,40);
         Text t_invest(650,295,"INVEST");
 
+        //buy button
         Rectangle button_buy(500,360,100,40);
         Text t_buy(500,360,"BUY");
 
+        //roll button
         Rectangle button_roll(800,360,100,40);
         Text t_roll(800,360,"ROLL");
 
+        //end turn button
         Rectangle button_turn(1215,660,100,40);
         Text t_turn(1215,660,"END TURN");
 
+        //dice rectangle
         Rectangle dice(650,220,75,75);
         dice.setColor(COLOR(153,51,255));
         dice.setFill(true);
         Engine();
 }
+
+//for checking the clicks on the canvas
 
 void checkClick()
 {
@@ -134,13 +145,17 @@ void checkClick()
     {
         endTurn = false;
 
-        int clickbox=getClick();
+        int clickbox=getClick(); //storing the click position as 65536*Xposition + Yposition
         int p=clickbox/65536;
         int q=clickbox%65536;
 
-        if(p>550 && p<750 && q>275 && q<315 && rolled && (cells[currPosition].owner==currPlayer) && !turnCompleted)/*Invest is clicked*/
+        if(p>550 && p<750 && q>275 && q<315 && rolled && (cells[currPosition].owner==currPlayer) && !turnCompleted
+           && currPosition!=0 && currPosition!=5&& currPosition!=8&& currPosition!=11&& currPosition!=16&& currPosition!=19)
+            /*Invest is clicked*/
         {
             Rectangle temp(650,295,200,40);
+            // a temporary rectangle to indicate that
+            //the box has been clicked
             temp.setColor(COLOR(160,160,160));
             temp.setFill(true);
             wait(0.1);
@@ -157,14 +172,19 @@ void checkClick()
             }
         }
 
-        else if(p>450 && p<550 && q>340 && q<380 && rolled && cells[currPosition].owner==-1 && !turnCompleted)/*Buy is clicked*/
+        else if(p>450 && p<550 && q>340 && q<380 && rolled && cells[currPosition].owner==-1 && !turnCompleted
+                && currPosition!=0 && currPosition!=5&& currPosition!=8&& currPosition!=11&& currPosition!=16&& currPosition!=19)
+                    /*Buy is clicked*/
         {
             Rectangle temp(500,360,100,40);
+            // a temporary rectangle to indicate that
+            //the box has been clicked
             temp.setColor(COLOR(160,160,160));
             temp.setFill(true);
             wait(0.1);
             temp.hide();
 
+            // displays message box
             int localCheck = MessageBox(NULL,"Do you want to buy this Property \t\t","Question",MB_YESNO|MB_ICONQUESTION);
             if(localCheck==IDYES)
             {
@@ -181,6 +201,8 @@ void checkClick()
         else if(p>750 && p<850 && q>340 && q<380 && (!rolled))/*Roll is clicked*/
         {
             Rectangle temp(800,360,100,40);
+            // a temporary rectangle to indicate that
+            //the box has been clicked
             temp.setColor(COLOR(160,160,160));
             temp.setFill(true);
             wait(0.1);
@@ -195,6 +217,8 @@ void checkClick()
         else if(p>1165 && p<1265 && q>640 && q<680 && rolled)/*End Turn is clicked*/
         {
             Rectangle temp(1215,660,100,40);
+            // a temporary rectangle to indicate that
+            //the box has been clicked
             temp.setColor(COLOR(160,160,160));
             temp.setFill(true);
             wait(0.1);
@@ -209,9 +233,12 @@ void checkClick()
             {
                 if(p>cells[i].xCentre-(cells[i].length)/2 && p<cells[i].xCentre+(cells[i].length)/2
                    && q>cells[i].yCentre-(cells[i].breadth)/2 && q<cells[i].yCentre+(cells[i].breadth)/2)
+                // evaluates to true if the click position is inside the i'th cell
                 {
                     Rectangle temp(cells[i].xCentre,cells[i].yCentre,cells[i].length,cells[i].breadth);
                     temp.setColor(COLOR(160,160,160));
+                    // a temporary rectangle to indicate that
+                    //the box has been clicked
                     temp.setFill(true);
                     wait(0.1);
                     temp.hide();
@@ -225,7 +252,10 @@ void checkClick()
                 if(p>players[i].xCentre-(players[i].length)/2 && p<players[i].xCentre+(players[i].length)/2
                    && q>players[i].yCentre-(players[i].breadth)/2 && q<players[i].yCentre+(players[i].breadth)/2)
                    {
+                        //evaluates to true if the click position is inside a player's box
                         Rectangle temp(players[i].xCentre,players[i].yCentre,players[i].length,players[i].breadth);
+                        // a temporary rectangle to indicate that
+                        //the box has been clicked
                         temp.setColor(COLOR(160,160,160));
                         temp.setFill(true);
                         wait(0.1);
@@ -244,29 +274,31 @@ void checkClick()
 }
 
 
-void layout()
+void layout() // the initial screen
 {
     initCanvas("IITB Monopoly",1300,700);
 
-    Rectangle start(650,200,500,70);
+    Rectangle start(650,200,500,70); // start button
     Text start1(650,200,"Game On!");
 
     start1.setColor(COLOR("blue"));
     start1.setFill(true);
 
-    Rectangle instr(650,500,500,70);
+    Rectangle instr(650,500,500,70); // instruction button
     Text instr1(650,500,"How to Play??");
 
     instr1.setColor(COLOR("red"));
     instr1.setFill(true);
 
     int clickpos=getClick();
+    //stores click position as 65536*Xposition + Yposition
     int a=clickpos/65536;
     int b=clickpos%65536;
 
     while(!(a<900 && a>400 && b<235 && b>165) && !(a>400 && a<900 && b>465 && b<535))/*when clicked outside the boxes the canvas does not close*/
     {
         clickpos=getClick();
+        //stores click position as 65536*Xposition + Yposition
         a=clickpos/65536;
         b=clickpos%65536;
     }
@@ -311,6 +343,8 @@ void layout()
 
         canvas.setColor(COLOR(255,255,204));
         canvas.setFill(true);
+
+        //Instructions
 
         Text t_instr_1(650,20,"INSTRUCTIONS");
         Text t_instr_2(330,80,"1. The game consists of four players where each one starts with 50 hours of time and an amount of");
@@ -357,7 +391,7 @@ void layout()
         Text t_instr_43(1010,200,"6. In order to get the amount of money and time left with a player, click on the block that the");
         Text t_instr_44(790,216,"player belongs to.");
         Text t_instr_45(900,234,"7. End of the Game is defined in the following two ways :-");
-        Text t_instr_46(910,252,"(a) When any of the players crosses the amount of Rs _");
+        Text t_instr_46(928,252,"(a) When any of the players crosses the amount of Rs 80,000");
         Text t_instr_47(904,270,"(b) When all the players except one become bankrupt.");
 
 
@@ -369,6 +403,7 @@ void layout()
         while(true)
         {
             int clickpos2=getClick();
+            //stores click position as 65536*Xposition + Yposition
             int x=clickpos2/65536;
             int y=clickpos2%65536;
 
@@ -429,7 +464,7 @@ void layout()
                 t_instr_45.hide();
                 t_instr_46.hide();
                 t_instr_47.hide();
-                board();
+                board(); // calls the main board
             }
 
 
@@ -438,4 +473,5 @@ void layout()
     }
 
 }
+//end of graphics code
 
